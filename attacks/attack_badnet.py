@@ -5,12 +5,13 @@ from random import randrange
 
 import numpy as np
 import torch
-
-from defense.onion import run_onion
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '/home/ubuntu/BackdoorNLP/'))
 from poison.models import load_model
 from poison.poison_model import train
 from utils.data_utils import get_all_data, write_file
-
+from defense.onion import run_onion
 
 def generate_poison_sentence(sentence):
     count = 1
@@ -61,9 +62,9 @@ if __name__ == "__main__":
     parser.add_argument("--lr", default=2e-5, help="1e-5, 1e-10, 2e-5", type=float)
     parser.add_argument("--batch-size", default=32, type=int)
     parser.add_argument("--dataset", default="ag", help="sst-2, ag")
-    parser.add_argument("--clean-data-path", default="/home/path/OrderBkd/data/")
+    parser.add_argument("--clean-data-path", default="/home/ubuntu/BackdoorNLP/data/ag")
     parser.add_argument(
-        "--output-path", default="/home/path/OrderBkd/result_dataset/badnet_"
+        "--output-path", default="/home/ubuntu/BackdoorNLP/result_dataset/badnet_"
     )
     parser.add_argument("--poison-rate", default=10, type=int)
     args = parser.parse_args()

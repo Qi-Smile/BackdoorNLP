@@ -29,3 +29,5 @@ If the code or method help you in the research, please cite the following paper:
   url={https://api.semanticscholar.org/CorpusID:267627289}
 }
 ```
+### Dataset
+Data is stored in folder .data
