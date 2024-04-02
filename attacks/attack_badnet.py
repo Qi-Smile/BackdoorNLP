@@ -62,7 +62,7 @@ if __name__ == "__main__":
     parser.add_argument("--lr", default=2e-5, help="1e-5, 1e-10, 2e-5", type=float)
     parser.add_argument("--batch-size", default=32, type=int)
     parser.add_argument("--dataset", default="ag", help="sst-2, ag")
-    parser.add_argument("--clean-data-path", default="/home/ubuntu/BackdoorNLP/data/ag")
+    parser.add_argument("--clean-data-path", default="/home/ubuntu/BackdoorNLP/data")
     parser.add_argument(
         "--output-path", default="/home/ubuntu/BackdoorNLP/result_dataset/badnet_"
     )

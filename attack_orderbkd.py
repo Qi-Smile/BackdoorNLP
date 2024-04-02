@@ -140,8 +140,8 @@ def main():
     parser.add_argument("--batch-size", default=2, type=int)
     parser.add_argument("--dataset", default="sst-2", help="sst-2, ag, imbd")
     parser.add_argument("--onion", default=False, help="defense")
-    parser.add_argument("--clean-data-path", default="/home/path/OrderBkd/data/")
-    parser.add_argument("--output-path", default="/home/path/OrderBkd/result_dataset/orderbkd_")
+    parser.add_argument("--clean-data-path", default="/data/")
+    parser.add_argument("--output-path", default="/result_dataset/orderbkd_")
     args = parser.parse_args()
 
     DATASET_LINK = "https://nextcloud.ispras.ru/index.php/s/km9iNzswTC7gHS2/download/data.zip"
